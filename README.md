@@ -1,2 +1,5 @@
-# Capstone17
-Capstone Project for the Spring 2017 Semester for Amanda and Francisco
+# Overripe Pantry Capstone Project 
+##### Amanda Jackson and Francisco Fantl 
+##### Spring 2017
+
+
