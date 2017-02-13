@@ -1,6 +1,21 @@
+/**
+ *  Author: Francisco Fantl
+ *  Project: Overripe Pantry
+ */
+
 import java.io.*;
 import java.net.*;
 
+/**
+ *  Universal Product Code (UPC) API Prototype
+ *
+ *  This method provides with product codes to the upcitemdb API and returns a JSON object,
+ *  with an object.
+ *
+ *  TODO
+ *  * Setup exceptions when creating the JSON parser.
+ *  * Prettify.
+ */
 public class getUPC{
 
    public static String getUPC(String upcCode) throws Exception {
