@@ -18,6 +18,24 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity
+                android:name=".GroceryLists"
+                android:label="@string/title_activity_grocery_lists"
+                android:parentActivityName=".MainActivity"
+                android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.example.amanda.overripepantry.MainActivity"/>
+        </activity>
+        <activity
+                android:name=".Inventory"
+                android:label="@string/title_activity_inventory"
+                android:parentActivityName=".MainActivity"
+                android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.example.amanda.overripepantry.MainActivity"/>
+        </activity>
     </application>
 
 </manifest>
