@@ -1,41 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
+<LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
-        tools:context="com.example.amanda.overripepantry.InventoryEntry">
-
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical">
     <android.support.design.widget.AppBarLayout
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:theme="@style/AppTheme.AppBarOverlay">
+            android:theme="@style/AppTheme.AppBarOverlay"/>
 
-        <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="@color/darkgreen"
-                app:popupTheme="@style/AppTheme.PopupOverlay"/>
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/darkgreen"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
 
-    </android.support.design.widget.AppBarLayout>
-
-    <include layout="@layout/content_inventory_entry"/>
-    <TextView
-        android:id="@+id/test_message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/testmessagestr"
-        android:textSize="10pt">
-    </TextView>
-    <EditText android:id="@+id/edit_message"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:hint="@string/edit_message"/>
-    <Button
-            android:layout_width="wrap_content"
+    <EditText
+            android:id="@+id/editItemName"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/button_enter"/>
-</android.support.design.widget.CoordinatorLayout>
+            android:hint="Item Name"/>
+    <EditText
+            android:id="@+id/editNameBrand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Brand Name"/>
+    <EditText
+            android:id="@+id/editQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Quantity"/>
+    <EditText
+            android:id="@+id/editQuantityUnit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Unit"/>
+    <EditText
+            android:id="@+id/editExpirationDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Expiration Date"/>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+        <Button
+                android:id="@+id/button_enter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_enter"/>
+    </LinearLayout>
+</LinearLayout>
