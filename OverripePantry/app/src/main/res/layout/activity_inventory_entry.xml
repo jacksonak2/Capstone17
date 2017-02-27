@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
-        tools:context="com.example.amanda.overripepantry.MainActivity">
+        tools:context="com.example.amanda.overripepantry.InventoryEntry">
 
     <android.support.design.widget.AppBarLayout
             android:layout_height="wrap_content"
@@ -22,15 +22,14 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab"
+    <include layout="@layout/content_inventory_entry"/>
+
+    <EditText android:id="@+id/edit_message"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:hint="@string/edit_message"/>
+    <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_margin="@dimen/fab_margin"
-            app:srcCompat="@drawable/ic_add_white_18dp"
-            app:backgroundTint="@color/darkgreen"/>
-    <include layout="@layout/content_main"/>
-
-
+            android:text="@string/button_enter"/>
 </android.support.design.widget.CoordinatorLayout>

@@ -3,4 +3,7 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_grocery_lists">Overripe Pantry</string>
     <string name="title_activity_inventory">Overripe Pantry</string>
+    <string name="title_activity_inventory_entry">Overripe Pantry</string>
+    <string name="edit_message">Item Name</string>
+    <string name="button_enter">Enter</string>
 </resources>
