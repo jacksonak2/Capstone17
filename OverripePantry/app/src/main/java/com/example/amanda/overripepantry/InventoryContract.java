@@ -53,7 +53,6 @@ public class InventoryContract {
 
         public static final String TABLE_NAME = "grocerylists";
         public static final String COLUMN_NAME_TITLE = "title";
-        public static final String COLUMN_NAME_LISTID = "groceryid";
 
         public static Uri buildGroceryListsUri(long id){
             return ContentUris.withAppendedId(CONTENT_URI, id);
@@ -74,6 +73,7 @@ public class InventoryContract {
 
 
         public static final String TABLE_NAME = "grocery";
+        public static final String COLUMN_NAME_LISTID = "listID";
         public static final String COLUMN_NAME_TITLE = "title";
         public static final String COLUMN_NAME_QTY = "qty";
 
