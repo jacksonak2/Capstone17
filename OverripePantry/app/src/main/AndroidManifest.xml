@@ -46,6 +46,8 @@
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value="com.example.amanda.overripepantry.MainActivity"/>
         </activity>
+        <activity android:name=".BarcodeScanner">
+        </activity>
     </application>
 
 </manifest>

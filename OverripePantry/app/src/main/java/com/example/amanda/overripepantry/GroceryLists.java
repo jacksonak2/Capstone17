@@ -1,11 +1,15 @@
 package com.example.amanda.overripepantry;
 //http://stackoverflow.com/questions/37594936/expansion-panels-in-google-material-design-android
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 //import android.widget.RelativeLayout;
 
 public class GroceryLists extends AppCompatActivity {
@@ -17,14 +21,39 @@ public class GroceryLists extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.inventory_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        /**if (id == R.id.action_settings) {
+         *  return true;
+         *  } else
+         */
+        if (id == R.id.inventory_settings) {
+            Intent intent = new Intent(GroceryLists.this, Inventory.class);
+            startActivity(intent);
+        } else if (id == R.id.home_settings) {
+            Intent intent = new Intent(GroceryLists.this, MainActivity.class);
+            startActivity(intent);
+        } else if (id == R.id.login_settings) {
+            Toast.makeText(GroceryLists.this, "You Clicked : " + item.getTitle(), Toast.LENGTH_SHORT).show();
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 /*
     ExpandableLinearLayout content=(ExpandableLinearLayout) itemView.findViewById(R.id.content);

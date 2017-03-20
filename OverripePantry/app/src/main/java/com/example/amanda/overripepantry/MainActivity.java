@@ -33,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
                         if (item.getTitle().toString().contentEquals("Barcode Scanner")) {
-                            Toast.makeText(MainActivity.this, "You Clicked : " + item.getTitle(), Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(MainActivity.this, BarcodeScanner.class);
+                            startActivity(intent);
                         } else if(item.getTitle().toString().contentEquals("Manually Enter")) {
                             Intent intent = new Intent(MainActivity.this, InventoryEntry.class);
                             startActivity(intent);
@@ -61,8 +62,18 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        /**if (id == R.id.action_settings) {
+          *  return true;
+          *  } else
+          */
+         if (id == R.id.grocerylists_settings) {
+            Intent intent = new Intent(MainActivity.this, GroceryLists.class);
+            startActivity(intent);
+        } else if (id == R.id.inventory_settings) {
+            Intent intent = new Intent(MainActivity.this, Inventory.class);
+            startActivity(intent);
+        } else if (id == R.id.login_settings) {
+            Toast.makeText(MainActivity.this, "You Clicked : " + item.getTitle(), Toast.LENGTH_SHORT).show();
         }
 
         return super.onOptionsItemSelected(item);
