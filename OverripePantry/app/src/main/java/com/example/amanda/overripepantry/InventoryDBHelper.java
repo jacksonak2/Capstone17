@@ -33,6 +33,11 @@ public class InventoryDBHelper extends SQLiteOpenHelper {
         addGroceryProductTable(db);
     }
 
+    @Override
+    public void onUpdate(SQLiteDatabase db, int oldVersion, int newVersion) {
+
+    }
+
     /**
      *  Called when the database is updated.
      *  @param db the data being created, which all SQL statements will be executed on.

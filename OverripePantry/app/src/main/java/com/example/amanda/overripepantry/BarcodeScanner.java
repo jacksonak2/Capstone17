@@ -38,16 +38,17 @@ public class BarcodeScanner extends AppCompatActivity {
                             .setBarcodeFormats(Barcode.DATA_MATRIX |
                             Barcode.QR_CODE).build();
                 //Detect the Barcode
+                if (!detector.isOperational()) {
+                    System.err.print("This died pls help");
+                    return;
+                }
                 Frame frame = new Frame.Builder().setBitmap(myBitmap).build();
                 SparseArray<Barcode> barcodes = detector.detect(frame);
                 //Decode the Barcode
                 Barcode thisCode = barcodes.valueAt(0);
                 TextView txtView = (TextView) findViewById(R.id.txtContent);
                 txtView.setText(thisCode.rawValue);
-                if (!detector.isOperational()) {
-                    txtView.setText("Could not set up the detector");
-                    return;
-                }
+
 
             }
         });
