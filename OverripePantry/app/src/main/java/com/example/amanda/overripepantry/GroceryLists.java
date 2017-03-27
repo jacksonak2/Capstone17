@@ -50,7 +50,8 @@ public class GroceryLists extends AppCompatActivity {
             Intent intent = new Intent(GroceryLists.this, MainActivity.class);
             startActivity(intent);
         } else if (id == R.id.login_settings) {
-            Toast.makeText(GroceryLists.this, "You Clicked : " + item.getTitle(), Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(GroceryLists.this, LoginScreen.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);
