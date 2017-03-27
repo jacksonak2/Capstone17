@@ -34,6 +34,14 @@ public class InventoryDBHelper extends SQLiteOpenHelper {
     }
 
     /**
+     *  Called when the database is updated.
+     *  @param db the data being created, which all SQL statements will be executed on.
+     */
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
+
+    }
+    /**
             * Inserts the genre table into the database.
      * @param db The SQLiteDatabase the table is being inserted into.
      */
@@ -79,7 +87,7 @@ public class InventoryDBHelper extends SQLiteOpenHelper {
                         InventoryContract.GroceryProductEntry._ID + " INTEGER PRIMARY KEY, " +
                         InventoryContract.GroceryProductEntry.COLUMN_NAME_TITLE + " TEXT NOT NULL, " +
                         InventoryContract.GroceryProductEntry.COLUMN_NAME_QTY + " INT NOT NULL " +
-                        InventoryContract.GroceryProductEntry.COLUMN_NAME_LISTID + " INT NOT NULL"
+                        InventoryContract.GroceryProductEntry.COLUMN_NAME_LISTID + " INT NOT NULL" +
                         "FOREIGN KEY (" + InventoryContract.GroceryListEntry._ID + ") " +
                         "REFERENCES " + InventoryContract.GroceryProductEntry.TABLE_NAME + " (" + InventoryContract.GroceryProductEntry.COLUMN_NAME_LISTID + "));"
         );
