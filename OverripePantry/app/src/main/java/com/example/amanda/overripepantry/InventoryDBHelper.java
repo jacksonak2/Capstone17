@@ -33,6 +33,11 @@ public class InventoryDBHelper extends SQLiteOpenHelper {
         addGroceryProductTable(db);
     }
 
+    @Override
+    public void onUpdate(SQLiteDatabase db, int oldVersion, int newVersion) {
+
+    }
+
     /**
             * Inserts the genre table into the database.
      * @param db The SQLiteDatabase the table is being inserted into.
