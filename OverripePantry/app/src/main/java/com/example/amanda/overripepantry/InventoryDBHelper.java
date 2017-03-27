@@ -34,7 +34,7 @@ public class InventoryDBHelper extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onUpdate(SQLiteDatabase db, int oldVersion, int newVersion) {
+    public void onUgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }
 
