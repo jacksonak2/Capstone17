@@ -33,7 +33,6 @@ public class InventoryDBHelper extends SQLiteOpenHelper {
         addGroceryProductTable(db);
     }
 
-
     /**
      *  Called when the database is updated.
      *  @param db the data being created, which all SQL statements will be executed on.
