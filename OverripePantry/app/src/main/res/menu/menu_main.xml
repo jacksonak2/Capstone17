@@ -10,6 +10,4 @@
           android:title="Inventory"/>
     <item android:id="@+id/grocerylists_settings"
           android:title="Grocery List"/>
-    <item android:id="@+id/login_settings"
-          android:title="Login"/>
 </menu>

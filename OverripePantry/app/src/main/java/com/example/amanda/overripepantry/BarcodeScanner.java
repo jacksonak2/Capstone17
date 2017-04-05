@@ -21,37 +21,7 @@ public class BarcodeScanner extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //Wiring up the Button
-        Button btn = (Button) findViewById(R.id.button);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //Load the Image
-                ImageView myImageView = (ImageView) findViewById(R.id.imgview);
-                Bitmap myBitmap = BitmapFactory.decodeResource(
-                        getApplicationContext().getResources(),
-                        R.drawable.puppy);
-                myImageView.setImageBitmap(myBitmap);
-                //Setup the Barcode Detector
-                BarcodeDetector detector =
-                        new BarcodeDetector.Builder(getApplicationContext())
-                            .setBarcodeFormats(Barcode.DATA_MATRIX |
-                            Barcode.QR_CODE).build();
-                //Detect the Barcode
-                if (!detector.isOperational()) {
-                    System.err.print("This died pls help");
-                    return;
-                }
-                Frame frame = new Frame.Builder().setBitmap(myBitmap).build();
-                SparseArray<Barcode> barcodes = detector.detect(frame);
-                //Decode the Barcode
-                Barcode thisCode = barcodes.valueAt(0);
-                TextView txtView = (TextView) findViewById(R.id.txtContent);
-                txtView.setText(thisCode.rawValue);
 
-
-            }
-        });
         setContentView(R.layout.activity_barcode_scanner);
     }
 

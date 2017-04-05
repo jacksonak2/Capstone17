@@ -52,6 +52,7 @@ public class InventoryEntry extends AppCompatActivity {
         try {
             expDate = dateFormat.parse(dateField.getText().toString());
         } catch(ParseException e) {
+            //TODO throw this as a toast instead of a println
             System.out.print("Error in the Date.");
             expDate = null;
         }
@@ -82,9 +83,6 @@ public class InventoryEntry extends AppCompatActivity {
             startActivity(intent);
         } else if (id == R.id.home_settings) {
             Intent intent = new Intent(InventoryEntry.this, MainActivity.class);
-            startActivity(intent);
-        } else if (id == R.id.login_settings) {
-            Intent intent = new Intent(InventoryEntry.this, LoginScreen.class);
             startActivity(intent);
         } else if (id == R.id.grocerylists_settings) {
             Intent intent = new Intent(InventoryEntry.this, GroceryLists.class);

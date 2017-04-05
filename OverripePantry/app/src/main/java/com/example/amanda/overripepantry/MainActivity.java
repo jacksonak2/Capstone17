@@ -1,5 +1,6 @@
 package com.example.amanda.overripepantry;
 
+import android.annotation.TargetApi;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -12,7 +13,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
-
+@TargetApi(7)
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -73,9 +74,6 @@ public class MainActivity extends AppCompatActivity {
         } else if (id == R.id.inventory_settings) {
             Intent intent = new Intent(MainActivity.this, Inventory.class);
             startActivity(intent);
-        } else if (id == R.id.login_settings) {
-             Intent intent = new Intent(MainActivity.this, LoginScreen.class);
-             startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);

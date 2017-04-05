@@ -49,9 +49,6 @@ public class GroceryLists extends AppCompatActivity {
         } else if (id == R.id.home_settings) {
             Intent intent = new Intent(GroceryLists.this, MainActivity.class);
             startActivity(intent);
-        } else if (id == R.id.login_settings) {
-            Intent intent = new Intent(GroceryLists.this, LoginScreen.class);
-            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);
